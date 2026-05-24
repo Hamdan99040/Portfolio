@@ -1,0 +1,132 @@
+{
+  "admin": {
+    "email": "admin@portfolio.com",
+    "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "otpSecret": "PORTFOLIOSECRET2026",
+    "name": "Zain Ul Abadin",
+    "title": "Full Stack Developer | SQA Engineer",
+    "location": "Lahore, Pakistan",
+    "bio": "Passionate MERN Stack Developer and Software Quality Assurance (SQA) Engineer. Dedicated to building secure, scalable web applications and ensuring flawless user experiences through comprehensive manual and automated testing.",
+    "cvUrl": "#",
+    "avatarUrl": "",
+    "profiles": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "upwork": "https://upwork.com",
+      "email": "zain@portfolio.com"
+    }
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Discover Zone",
+      "description": "A comprehensive MERN stack platform featuring high-security authentication, user discovery, and localized interactive services.",
+      "problemSolved": "Solved secure, decentralized session authentication and robust real-time updates for localized maps and search functionality.",
+      "role": "Lead Full-Stack Developer & SQA Engineer",
+      "github": "https://github.com",
+      "demo": "https://demo.com",
+      "category": "MERN",
+      "technologies": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT"],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "proj-2",
+      "title": "SecureConnect React Native",
+      "description": "Cross-platform mobile application utilizing biometric security, OTP verification, and offline-first encrypted storage.",
+      "problemSolved": "Engineered low-latency secure synchronization with the Node.js backend using WebSockets, and handled local hardware security APIs.",
+      "role": "Mobile Developer & QA Automation Engineer",
+      "github": "https://github.com",
+      "demo": "https://demo.com",
+      "category": "React Native",
+      "technologies": ["React Native", "Expo", "Node.js", "Express.js", "Cypress", "Appium"],
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "proj-3",
+      "title": "QA Automation Framework",
+      "description": "An end-to-end automation testing suite utilizing Cypress, Postman, and CI/CD actions for comprehensive API and UI validation.",
+      "problemSolved": "Decreased regression testing duration by 75% and automated standard bug reporting flows directly into Jira APIs.",
+      "role": "QA Automation Engineer",
+      "github": "https://github.com",
+      "demo": "https://demo.com",
+      "category": "SQA",
+      "technologies": ["Cypress", "Postman", "JavaScript", "GitHub Actions", "Jira API"],
+      "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?q=80&w=800&auto=format&fit=crop"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp-1",
+      "company": "TechGlobal Solutions",
+      "role": "SQA Engineer (Intern)",
+      "period": "Sep 2025 - Mar 2026",
+      "description": "Designed comprehensive test cases, managed automated UI testing with Cypress, performed REST API validation via Postman, and spearheaded bug tracking and documentation processes.",
+      "type": "Internship"
+    },
+    {
+      "id": "exp-2",
+      "company": "Freelance Client Services",
+      "role": "Full Stack & QA Specialist",
+      "period": "May 2024 - Present",
+      "description": "Developed dynamic web interfaces using React.js and Next.js, built robust API architectures with Node/Express, and provided manual and automated testing audits for international clients.",
+      "type": "Freelance"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "MERN Stack Development Masterclass",
+      "issuer": "Coursera / Meta Professional",
+      "date": "2025",
+      "credentialUrl": "#",
+      "type": "Development"
+    },
+    {
+      "id": "cert-2",
+      "title": "Advanced Software Automation Testing",
+      "issuer": "Udemy Certification",
+      "date": "2025",
+      "credentialUrl": "#",
+      "type": "QA"
+    },
+    {
+      "id": "cert-3",
+      "title": "International English Language Testing System (IELTS)",
+      "issuer": "British Council (Band 7.5)",
+      "date": "2026",
+      "credentialUrl": "#",
+      "type": "Language"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "name": "Academic Degree Scan",
+      "type": "Degree",
+      "fileName": "BS_Computer_Science_Degree.pdf",
+      "watermarkText": "FOR RECRUITMENT USE ONLY - CONFIDENTIAL",
+      "uploadedAt": "2026-05-24T12:00:00Z",
+      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgRGVncmVlIFNjYW4KMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoVU5JVkVSU0lUWSBPRiBPS0FSQSAtIEJTIENPTVBVVEVSIFNDSUVOQ0UpIFNqCiAgMCA1MCBUZAogIChHcmFkdWF0ZTogWkFJTiBVTCBBQkFESU4pIFNqCiAgRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCiAgPDwgL1R5cGUgL1ZvbnQKICAgICAvU3VidHlwZSAvVHlwZTEKICAgICAvQmFzZUZvbnQgL0hlbHZldGljYQogID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA3MCAwMDAwMCBuIAowMDAwMDAwMTMxIDAwMDAwIG4gCjAwMDAwMDAyNjAgMDAwMDAgbiAKMDAwMDAwMDQ2MCAwMDAwMCBuIAp0cmFpbGVyCiAgPDwgL1NpemUgNgogICAgIC9Sb290IDEgMCBSCiAgPj4Kc3RhcnR4cmVmCjU1NQolJUVPRgo="
+    },
+    {
+      "id": "doc-2",
+      "name": "SQA Internship Letter",
+      "type": "Experience Letter",
+      "fileName": "SQA_Internship_Completion_Letter.pdf",
+      "watermarkText": "FOR VISA & RECRUITMENT ONLY",
+      "uploadedAt": "2026-05-24T12:05:00Z",
+      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgSW50ZXJuc2hpcCBMZXR0ZXIKMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoVEVDSEdMT0JBTCBTT0xVVElPTlMgLSBJTlRFUk5TSElQIExFVFRFUikgU2oKICAwIDUwIFRkCiAgKFNRQSBFbmdpbmVlcjogWkFJTiBVTCBBQkFESU4pIFNqCiAgRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCiAgPDwgL1R5cGUgL1ZvbnQKICAgICAvU3VidHlwZSAvVHlwZTEKICAgICAvQmFzZUZvbnQgL0hlbHZldGljYQogID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA3MCAwMDAwMCBuIAowMDAwMDAwMTMxIDAwMDAwIG4gCjAwMDAwMDAyNjAgMDAwMDAgbiAKMDAwMDAwMDQ2MCAwMDAwMCBuIAp0cmFpbGVyCiAgPDwgL1NpemUgNgogICAgIC9Sb290IDEgMCBSCiAgPj4Kc3RhcnR4cmVmCjU1NQolJUVPRgo="
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "name": "Jane Miller",
+      "email": "jane@techcorp.de",
+      "subject": "QA Automation Opportunities in Munich",
+      "message": "Hi Zain, we loved your QA automation work on GitHub! We have several roles open for SQA engineers with React/Next experience. Let me know if you are open to discussing opportunities in Germany.",
+      "sentAt": "2026-05-24T14:30:00Z"
+    }
+  ],
+  "sharedLinks": []
+}
