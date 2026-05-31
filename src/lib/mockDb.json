@@ -1,121 +1,160 @@
 {
   "admin": {
-    "email": "admin@portfolio.com",
-    "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "email": "hamdanyaseen99040@gmail.com",
+    "passwordHash": "0997c5c87b51c2cfb2db81f27f714058e3a668049bd87da54a4dafaf2ba4f0b3",
     "otpSecret": "PORTFOLIOSECRET2026",
-    "name": "Zain Ul Abadin",
+    "name": "Muhammad Hamdan",
     "title": "Full Stack Developer | SQA Engineer",
-    "location": "Lahore, Pakistan",
-    "bio": "Passionate MERN Stack Developer and Software Quality Assurance (SQA) Engineer. Dedicated to building secure, scalable web applications and ensuring flawless user experiences through comprehensive manual and automated testing.",
-    "cvUrl": "#",
-    "avatarUrl": "",
+    "location": "Okara, Pakistan",
+    "bio": "MERN Stack Developer and Software Quality Assurance (SQA) Engineer with a Bachelor of Computer Science from the University of Okara. Passionate about building secure, scalable web applications and ensuring flawless user experiences through comprehensive manual and automated testing. IELTS Band 7.5 certified and actively targeting international roles in Germany and Australia.",
+    "cvUrl": "/uploads/1780222111128_cv.pdf",
+    "avatarUrl": "/avatar.jpg",
     "profiles": {
       "github": "https://github.com",
       "linkedin": "https://linkedin.com",
-      "upwork": "https://upwork.com",
-      "email": "zain@portfolio.com"
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "email": "needmorecoffee99040@gmail.com"
     }
   },
   "projects": [
     {
       "id": "proj-1",
       "title": "Discover Zone",
-      "description": "A comprehensive MERN stack platform featuring high-security authentication, user discovery, and localized interactive services.",
-      "problemSolved": "Solved secure, decentralized session authentication and robust real-time updates for localized maps and search functionality.",
-      "role": "Lead Full-Stack Developer & SQA Engineer",
+      "description": "Final Year Project — a comprehensive MERN stack platform featuring personality testing via MBTI and OCEAN models, secure authentication, and a full-featured admin dashboard for results analytics.",
+      "problemSolved": "Solved the challenge of integrating scientifically-validated personality models (MBTI + OCEAN) with a real-time admin panel, enabling counselors and educators to track and analyze student personality profiles at scale.",
+      "role": "Lead Full-Stack Developer & SQA Engineer — designed architecture, built all APIs, implemented JWT auth, and wrote E2E test suite with Cypress.",
       "github": "https://github.com",
       "demo": "https://demo.com",
       "category": "MERN",
-      "technologies": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT"],
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT",
+        "Cypress"
+      ],
       "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
     },
     {
       "id": "proj-2",
-      "title": "SecureConnect React Native",
-      "description": "Cross-platform mobile application utilizing biometric security, OTP verification, and offline-first encrypted storage.",
-      "problemSolved": "Engineered low-latency secure synchronization with the Node.js backend using WebSockets, and handled local hardware security APIs.",
-      "role": "Mobile Developer & QA Automation Engineer",
+      "title": "Survey Application",
+      "description": "A cross-platform React Native mobile application designed for field survey data collection — featuring offline-first mobile forms, real-time survey reports, and secure user authentication.",
+      "problemSolved": "Enabled field workers to collect survey data in areas with limited connectivity using an offline-first architecture that syncs automatically when back online.",
+      "role": "Mobile Developer — built all screens with Expo, implemented offline storage with AsyncStorage, and integrated backend sync API.",
       "github": "https://github.com",
       "demo": "https://demo.com",
       "category": "React Native",
-      "technologies": ["React Native", "Expo", "Node.js", "Express.js", "Cypress", "Appium"],
+      "technologies": [
+        "React Native",
+        "Expo",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "AsyncStorage"
+      ],
       "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop"
     },
     {
       "id": "proj-3",
       "title": "QA Automation Framework",
-      "description": "An end-to-end automation testing suite utilizing Cypress, Postman, and CI/CD actions for comprehensive API and UI validation.",
-      "problemSolved": "Decreased regression testing duration by 75% and automated standard bug reporting flows directly into Jira APIs.",
-      "role": "QA Automation Engineer",
+      "description": "An end-to-end automation testing suite built with Cypress and Postman, integrated into a CI/CD GitHub Actions pipeline for comprehensive API and UI regression validation.",
+      "problemSolved": "Decreased regression testing time by 75% and automated structured bug reporting flows directly into project tracking tools, eliminating manual test cycles.",
+      "role": "QA Automation Engineer — designed the full framework, wrote custom Cypress commands, built Postman collections, and configured GitHub Actions pipeline.",
       "github": "https://github.com",
       "demo": "https://demo.com",
       "category": "SQA",
-      "technologies": ["Cypress", "Postman", "JavaScript", "GitHub Actions", "Jira API"],
+      "technologies": [
+        "Cypress",
+        "Postman",
+        "JavaScript",
+        "GitHub Actions",
+        "REST APIs",
+        "Jira"
+      ],
       "image": "https://images.unsplash.com/photo-1618401471353-b98aedd07871?q=80&w=800&auto=format&fit=crop"
     }
   ],
   "experiences": [
     {
       "id": "exp-1",
-      "company": "TechGlobal Solutions",
-      "role": "SQA Engineer (Intern)",
-      "period": "Sep 2025 - Mar 2026",
-      "description": "Designed comprehensive test cases, managed automated UI testing with Cypress, performed REST API validation via Postman, and spearheaded bug tracking and documentation processes.",
+      "company": "Devzox",
+      "role": "Full Stack Developer Intern",
+      "period": "2025 – 2026 (6 Months)",
+      "description": "Worked on frontend development with React.js and backend APIs with Node.js/Express. Handled database management with MongoDB, performed API integration, and contributed to production features for client-facing applications.",
       "type": "Internship"
     },
     {
       "id": "exp-2",
-      "company": "Freelance Client Services",
-      "role": "Full Stack & QA Specialist",
-      "period": "May 2024 - Present",
-      "description": "Developed dynamic web interfaces using React.js and Next.js, built robust API architectures with Node/Express, and provided manual and automated testing audits for international clients.",
-      "type": "Freelance"
+      "company": "SQA Engineer",
+      "role": "Software Quality Assurance",
+      "period": "2025 – Present",
+      "description": "Responsible for end-to-end manual testing, regression testing cycles, writing comprehensive test cases, API testing with Postman, and structured bug reporting with detailed reproduction steps.",
+      "type": "Professional"
     }
   ],
   "certifications": [
     {
       "id": "cert-1",
-      "title": "MERN Stack Development Masterclass",
-      "issuer": "Coursera / Meta Professional",
-      "date": "2025",
-      "credentialUrl": "#",
-      "type": "Development"
+      "title": "Bachelor of Computer Science",
+      "issuer": "University of Okara",
+      "date": "2020-2024",
+      "credentialUrl": "/uploads/1780222332944_BSCS-Degree-F_JPG.jpg",
+      "type": "Academic"
     },
     {
       "id": "cert-2",
-      "title": "Advanced Software Automation Testing",
-      "issuer": "Udemy Certification",
-      "date": "2025",
+      "title": "Full Stack Development Internship Certificate",
+      "issuer": "Devzox",
+      "date": "2026",
       "credentialUrl": "#",
-      "type": "QA"
+      "type": "Professional"
     },
     {
       "id": "cert-3",
-      "title": "International English Language Testing System (IELTS)",
-      "issuer": "British Council (Band 7.5)",
+      "title": "IELTS English Proficiency — Band 7.5",
+      "issuer": "British Council",
       "date": "2026",
       "credentialUrl": "#",
       "type": "Language"
+    },
+    {
+      "id": "cert-4",
+      "title": "MERN Stack Development Masterclass",
+      "issuer": "Udemy",
+      "date": "2025",
+      "credentialUrl": "#",
+      "type": "Technical"
+    },
+    {
+      "id": "cert-5",
+      "title": "Advanced Software QA & Automation Testing",
+      "issuer": "Coursera",
+      "date": "2025",
+      "credentialUrl": "#",
+      "type": "Technical"
     }
   ],
   "documents": [
     {
       "id": "doc-1",
-      "name": "Academic Degree Scan",
+      "name": "BS Computer Science Degree",
       "type": "Degree",
-      "fileName": "BS_Computer_Science_Degree.pdf",
+      "fileName": "BS_Computer_Science_Degree_Hamdan.pdf",
       "watermarkText": "FOR RECRUITMENT USE ONLY - CONFIDENTIAL",
       "uploadedAt": "2026-05-24T12:00:00Z",
-      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgRGVncmVlIFNjYW4KMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoVU5JVkVSU0lUWSBPRiBPS0FSQSAtIEJTIENPTVBVVEVSIFNDSUVOQ0UpIFNqCiAgMCA1MCBUZAogIChHcmFkdWF0ZTogWkFJTiBVTCBBQkFESU4pIFNqCiAgRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCiAgPDwgL1R5cGUgL1ZvbnQKICAgICAvU3VidHlwZSAvVHlwZTEKICAgICAvQmFzZUZvbnQgL0hlbHZldGljYQogID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA3MCAwMDAwMCBuIAowMDAwMDAwMTMxIDAwMDAwIG4gCjAwMDAwMDAyNjAgMDAwMDAgbiAKMDAwMDAwMDQ2MCAwMDAwMCBuIAp0cmFpbGVyCiAgPDwgL1NpemUgNgogICAgIC9Sb290IDEgMCBSCiAgPj4Kc3RhcnR4cmVmCjU1NQolJUVPRgo="
+      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgRGVncmVlIFNjYW4KMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoVU5JVkVSU0lUWSBPRiBPS0FSQSAtIEJTIENPTVBVVEVSIFNDSUVOQ0UpIFNqCiAgMCA1MCBUZAogIChHcmFkdWF0ZTogTVVIQU1NQUQgSEFNREFOKSBTagogIEVUCmVuZHN0cmVhbQplbmRvYmoKNSAwIG9iagogIDw8IC9UeXBlIC9Gb250CiAgICAgL1N1YnR5cGUgL1R5cGUxCiAgICAgL0Jhc2VGb250IC9IZWx2ZXRpY2EKICA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNzAgMDAwMDAgbiAKMDAwMDAwMDEzMSAwMDAwMCBuIAowMDAwMDAwMjYwIDAwMDAwIG4gCjAwMDAwMDA0NjAgMDAwMDAgbiAKdHJhaWxlcgogIDw8IC9TaXplIDYKICAgICAvUm9vdCAxIDAgUgogID4+CnN0YXJ0eHJlZgo1NTUKJSVFT0YK"
     },
     {
       "id": "doc-2",
-      "name": "SQA Internship Letter",
+      "name": "Devzox Internship Completion Letter",
       "type": "Experience Letter",
-      "fileName": "SQA_Internship_Completion_Letter.pdf",
-      "watermarkText": "FOR VISA & RECRUITMENT ONLY",
+      "fileName": "Devzox_Internship_Letter_Hamdan.pdf",
+      "watermarkText": "FOR VISA & RECRUITMENT USE ONLY",
       "uploadedAt": "2026-05-24T12:05:00Z",
-      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgSW50ZXJuc2hpcCBMZXR0ZXIKMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoVEVDSEdMT0JBTCBTT0xVVElPTlMgLSBJTlRFUk5TSElQIExFVFRFUikgU2oKICAwIDUwIFRkCiAgKFNRQSBFbmdpbmVlcjogWkFJTiBVTCBBQkFESU4pIFNqCiAgRVQKZW5kc3RyZWFtCmVuZG9iago1IDAgb2JqCiAgPDwgL1R5cGUgL1ZvbnQKICAgICAvU3VidHlwZSAvVHlwZTEKICAgICAvQmFzZUZvbnQgL0hlbHZldGljYQogID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA3MCAwMDAwMCBuIAowMDAwMDAwMTMxIDAwMDAwIG4gCjAwMDAwMDAyNjAgMDAwMDAgbiAKMDAwMDAwMDQ2MCAwMDAwMCBuIAp0cmFpbGVyCiAgPDwgL1NpemUgNgogICAgIC9Sb290IDEgMCBSCiAgPj4Kc3RhcnR4cmVmCjU1NQolJUVPRgo="
+      "fileContent": "JVBERi0xLjQKJcOlhqFiwtHnCl8vV3JpdGVyIDEuMC4wCi8vTW9jayBQREYgQ29udGVudCBmb3IgSW50ZXJuc2hpcCBMZXR0ZXIKMSAwIG9iagogIDw8IC9UeXBlIC9DYXRhbG9nCiAgICAgL1BhZ2VzIDIgMCBSCiAgPj4KZW5kb2JqCjIgMCBvYmoKICA8PCAvVHlwZSAvUGFnZXMKICAgICAvS2lkcyBbIDMgMCBSIF0KICAgICAvQ291bnQgMQogID4+CmVuZG9iagozIDAgb2JqCiAgPDwgL1R5cGUgL1BhZ2UKICAgICAvUGFyZW50IDIgMCBSCiAgICAgL01lZGlhQm94IFswIDAgNTk1IDg0Ml0KICAgICAvQ29udGVudHMgNCAwIFIKICAgICAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PgogID4+CmVuZG9iago0IDAgb2JqCiAgPDwgL0xlbmd0aCAxNTAgPj4Kc3RyZWFtCiAgQlQKICAvRjEgMjQgVGYKICA1MCA3MDAgVGQKICAoREVWWk9YIC0gSU5URVJOU0hJUCBDT01QTEVUSU9OIExFVFRFUikgU2oKICAwIDUwIFRkCiAgKEZ1bGwgU3RhY2sgRGV2ZWxvcGVyOiBNVUhBTU1BRCBIQU1EQU4pIFNqCiAgRVQKZW5kc3RyZWFtCmVuZG9iagogIDw8IC9UeXBlIC9Gb250CiAgICAgL1N1YnR5cGUgL1R5cGUxCiAgICAgL0Jhc2VGb250IC9IZWx2ZXRpY2EKICA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNzAgMDAwMDAgbiAKMDAwMDAwMDEzMSAwMDAwMCBuIAowMDAwMDAwMjYwIDAwMDAwIG4gCjAwMDAwMDA0NjAgMDAwMDAgbiAKdHJhaWxlcgogIDw8IC9TaXplIDYKICAgICAvUm9vdCAxIDAgUgogID4+CnN0YXJ0eHJlZgo1NTUKJSVFT0YK"
     }
   ],
   "messages": [
@@ -124,7 +163,7 @@
       "name": "Jane Miller",
       "email": "jane@techcorp.de",
       "subject": "QA Automation Opportunities in Munich",
-      "message": "Hi Zain, we loved your QA automation work on GitHub! We have several roles open for SQA engineers with React/Next experience. Let me know if you are open to discussing opportunities in Germany.",
+      "message": "Hi Hamdan, we loved your QA automation work on GitHub! We have several roles open for SQA engineers with React/Next experience. Let me know if you are open to discussing opportunities in Germany.",
       "sentAt": "2026-05-24T14:30:00Z"
     }
   ],

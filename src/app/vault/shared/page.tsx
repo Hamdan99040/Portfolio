@@ -122,7 +122,7 @@ function SharedDocumentViewerContent() {
             </div>
 
             <p className="text-slate-400 max-w-md mx-auto text-sm sm:text-base leading-relaxed">
-              {error} Temporary credentials expire automatically after 24 hours to secure sensitive documents (Passport, CNIC, Degree Scans). Please contact Zain Ul Abadin to request a new temporary access token.
+              {error} Temporary credentials expire automatically after 24 hours to secure sensitive documents (Passport, CNIC, Degree Scans). Please contact Muhammad Hamdan Yaseen to request a new temporary access token.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -130,7 +130,7 @@ function SharedDocumentViewerContent() {
                 href="/#contact"
                 className="w-full sm:w-auto px-6 py-3 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md transition-colors"
               >
-                Contact Zain
+                Contact Hamdan
               </Link>
               <Link
                 href="/"
@@ -196,7 +196,7 @@ function SharedDocumentViewerContent() {
                   </p>
                   
                   <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5 text-xs sm:text-sm font-sans">
-                    <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Graduate Candidate</strong> Zain Ul Abadin</p>
+                    <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Graduate Candidate</strong> Muhammad Hamdan Yaseen</p>
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Award / File Scanned</strong> Bachelor of Science in Computer Science (BS CS)</p>
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Issuing Institution</strong> University Of Okara (Verified BS Degree)</p>
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">IELTS English Level</strong> Band Score 7.5 Certified</p>

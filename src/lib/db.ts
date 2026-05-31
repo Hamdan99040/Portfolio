@@ -41,7 +41,8 @@ const ExperienceSchema = new Schema({
   role: { type: String, required: true },
   period: { type: String, required: true },
   description: { type: String, required: true },
-  type: { type: String, required: true }
+  type: { type: String, required: true },
+  attachmentUrl: { type: String, default: '' }
 });
 
 const CertificationSchema = new Schema({
@@ -66,7 +67,8 @@ const ContactMessageSchema = new Schema({
   email: { type: String, required: true },
   subject: { type: String, required: true },
   message: { type: String, required: true },
-  sentAt: { type: String, required: true }
+  sentAt: { type: String, required: true },
+  attachmentUrl: { type: String, default: '' }
 });
 
 const SharedLinkSchema = new Schema({

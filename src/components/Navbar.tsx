@@ -2,104 +2,134 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Lock, Menu, X, ShieldCheck } from 'lucide-react';
+import { Lock, Menu, X, ShieldCheck, Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled]       = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection]  = useState('home');
+  const [theme, setTheme]                  = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
-      const scrollPosition = window.scrollY + 200;
-      
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
-          }
+
+      const sections = ['home', 'about', 'education', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+      const y = window.scrollY + 180;
+
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && y >= el.offsetTop && y < el.offsetTop + el.offsetHeight) {
+          setActiveSection(id);
+          break;
         }
       }
     };
-    
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const saved = (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
+    setTheme(saved);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    localStorage.setItem('theme', next);
+    document.documentElement.setAttribute('data-theme', next);
+    document.documentElement.classList.toggle('dark', next === 'dark');
+  };
+
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home',         label: 'Home' },
+    { id: 'about',        label: 'About' },
+    { id: 'education',    label: 'Education' },
+    { id: 'skills',       label: 'Skills' },
+    { id: 'projects',     label: 'Projects' },
+    { id: 'experience',   label: 'Experience' },
+    { id: 'certifications', label: 'Certs' },
+    { id: 'contact',      label: 'Contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'py-4 bg-[#060814]/80 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-indigo-950/10' 
-        : 'py-6 bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'py-3 bg-white/90 dark:bg-[#060814]/92 backdrop-blur-xl border-b border-slate-200/60 dark:border-white/[0.05] shadow-sm shadow-slate-900/[0.04]'
+          : 'py-5 bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
         {/* Logo */}
-        <Link href="#home" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-lg text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
-            Z
+        <Link href="#home" className="flex items-center gap-2.5 group" aria-label="Home">
+          <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-black text-base text-white shadow-md shadow-blue-600/25 group-hover:bg-blue-700 transition-colors duration-300">
+            H
           </div>
-          <span className="font-outfit font-bold text-lg tracking-wider text-white group-hover:text-indigo-400 transition-colors duration-300">
-            ZAIN<span className="text-indigo-500">.</span>QA
+          <span className="font-outfit font-bold text-base tracking-wide text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+            HAMDAN<span className="text-blue-600 dark:text-blue-400">.</span>DEV
           </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 text-sm font-medium">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-5">
+          <ul className="flex items-center gap-1 text-sm font-medium">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <Link
                   href={`#${link.id}`}
-                  className={`relative py-2 text-slate-300 hover:text-white transition-colors duration-300 ${
-                    activeSection === link.id ? 'text-white' : ''
+                  className={`relative px-3 py-2 rounded-lg transition-colors duration-300 ${
+                    activeSection === link.id
+                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 font-semibold'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/60 dark:hover:bg-white/[0.05]'
                   }`}
                 >
                   {link.label}
-                  {activeSection === link.id && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full" />
-                  )}
                 </Link>
               </li>
             ))}
           </ul>
 
-          {/* Secure Vault Portal CTA */}
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-xl bg-slate-100 dark:bg-white/[0.06] hover:bg-slate-200 dark:hover:bg-white/[0.10] text-slate-600 dark:text-slate-400 transition-colors cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4 text-amber-400" />}
+          </button>
+
+          {/* Vault CTA */}
           <Link
             href="/vault"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-indigo-950/40 border border-indigo-500/30 hover:border-indigo-400 hover:bg-indigo-950/80 shadow-md hover:shadow-indigo-500/10 transition-all duration-300 group"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-blue-600 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/[0.10] border border-blue-200/60 dark:border-blue-500/20 hover:bg-blue-100 dark:hover:bg-blue-500/20 hover:border-blue-300 dark:hover:border-blue-500/30 shadow-sm transition-all duration-300 group"
           >
-            <Lock className="w-3.5 h-3.5 text-indigo-400 group-hover:text-indigo-300 group-hover:scale-110 transition-all duration-300" />
+            <Lock className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-300" />
             Secure Vault
           </Link>
         </div>
 
-        {/* Mobile Menu Trigger */}
-        <div className="flex md:hidden items-center gap-4">
+        {/* Mobile controls */}
+        <div className="flex md:hidden items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-xl bg-slate-100 dark:bg-white/[0.06] text-slate-600 dark:text-slate-400"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4 text-amber-400" />}
+          </button>
           <Link
             href="/vault"
-            className="p-2 rounded-xl bg-indigo-950/40 border border-indigo-500/30 text-indigo-400 hover:text-indigo-300"
+            className="p-2 rounded-xl bg-blue-50 dark:bg-blue-500/[0.10] border border-blue-200/60 dark:border-blue-500/20 text-blue-600 dark:text-blue-400"
+            aria-label="Secure Vault"
           >
             <Lock className="w-4 h-4" />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-white/[0.06] text-slate-700 dark:text-slate-300"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -107,19 +137,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Overlay */}
+      {/* Mobile drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[72px] z-40 bg-[#060814]/95 backdrop-blur-xl border-t border-white/5 flex flex-col justify-between py-8 px-6 animate-fade-in">
-          <ul className="flex flex-col gap-6 text-lg font-medium">
+        <div className="md:hidden fixed inset-0 top-[60px] z-40 bg-white/98 dark:bg-[#060814]/98 backdrop-blur-xl border-t border-slate-200 dark:border-white/[0.05] flex flex-col justify-between py-8 px-6 animate-fade-in">
+          <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <Link
                   href={`#${link.id}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 ${
-                    activeSection === link.id 
-                      ? 'text-indigo-400 font-semibold' 
-                      : 'text-slate-300 hover:text-white'
+                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                    activeSection === link.id
+                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 font-semibold'
+                      : 'text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.05]'
                   }`}
                 >
                   {link.label}
@@ -127,18 +157,18 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          
-          <div className="flex flex-col gap-4">
+
+          <div className="flex flex-col gap-3">
             <Link
               href="/vault"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-3 w-full py-3.5 rounded-xl font-medium text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition-all duration-300"
+              className="flex items-center justify-center gap-3 w-full py-3.5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all duration-300"
             >
               <ShieldCheck className="w-5 h-5" />
-              Access Private Secure Vault
+              Access Secure Vault
             </Link>
-            <p className="text-center text-xs text-slate-500">
-              Authorized personnel only. Secure 2FA enforced.
+            <p className="text-center text-xs text-slate-400 dark:text-slate-600">
+              Authorized access only · Session audited
             </p>
           </div>
         </div>

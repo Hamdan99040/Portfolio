@@ -143,7 +143,6 @@ export default function VaultLogin() {
           <div>
             <span className="font-bold text-white block mb-0.5">Authorization Required</span>
             This gateway provides access to sensitive academic transcripts and personal IDs. Logins are fully audited.
-            <span className="block mt-1 font-semibold text-indigo-400">Demo Code: admin@portfolio.com | admin123 | 2FA: 123456</span>
           </div>
         </div>
 
@@ -170,7 +169,7 @@ export default function VaultLogin() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="admin@portfolio.com"
+                    placeholder="needmorecoffee99040@gmail.com"
                     disabled={loading}
                     className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-950/60 border border-white/5 focus:border-indigo-500/50 focus:bg-slate-950 text-white placeholder-slate-700 text-sm transition-all duration-300 outline-none"
                   />
