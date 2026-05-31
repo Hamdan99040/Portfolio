@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     }
     
     const body = await request.json();
-    const { company, role, period, description, type } = body;
+    const { company, role, period, description, type, attachmentUrl } = body;
     
     if (!company || !role || !period || !description || !type) {
       return NextResponse.json({ error: 'Missing required experience fields' }, { status: 400 });
@@ -39,7 +39,8 @@ export async function POST(request: Request) {
       role,
       period,
       description,
-      type
+      type,
+      attachmentUrl: attachmentUrl || ''
     });
     
     return NextResponse.json(newExp, { status: 201 });

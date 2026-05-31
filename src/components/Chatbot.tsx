@@ -13,7 +13,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi there! 👋 I'm **Zain's Personal AI Agent**. I can answer questions about his MERN stack apps (like *Discover Zone*), SQA testing automation skills, BS Computer Science degree, or his goals for Germany/Australia. Ask me anything!"
+      content: "Hi there! 👋 I'm **Hamdan's Personal AI Agent**. I can answer questions about his MERN stack apps (like *Discover Zone*), SQA testing automation skills, BS Computer Science degree, or his goals for Germany/Australia. Ask me anything!"
     }
   ]);
   const [input, setInput] = useState('');
@@ -61,7 +61,7 @@ export default function Chatbot() {
       console.error(err);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "📡 Network connection issue. I couldn't reach Zain's database servers. Please verify your connection."
+        content: "📡 Network connection issue. I couldn't reach Hamdan's database servers. Please verify your connection."
       }]);
     } finally {
       setLoading(false);
@@ -73,7 +73,7 @@ export default function Chatbot() {
     'What are his QA automation skills?',
     'MERN Stack background',
     'Why Germany/Australia?',
-    'How to contact Zain?'
+    'How to contact Hamdan?'
   ];
 
   return (
@@ -89,7 +89,7 @@ export default function Chatbot() {
           <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-500 border-2 border-[#060814] rounded-full" />
           {/* Tooltip on hover */}
           <span className="absolute right-16 bg-[#0d1224] text-xs font-semibold text-white px-3 py-1.5 rounded-lg border border-white/5 shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-            Chat with Zain's AI Agent
+            Chat with Hamdan's AI Agent
           </span>
         </button>
       )}
@@ -105,7 +105,7 @@ export default function Chatbot() {
               </div>
               <div className="text-left">
                 <h4 className="font-outfit font-bold text-sm text-white flex items-center gap-1.5">
-                  Zain's Advisor Agent
+                  Hamdan's Advisor Agent
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
                 </h4>
                 <p className="text-[10px] text-slate-400">Offline-friendly AI Assistant</p>

@@ -4,7 +4,7 @@ import { db } from '@/lib/db';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message, attachmentUrl } = body;
     
     if (!name || !email || !subject || !message) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
@@ -15,6 +15,7 @@ export async function POST(request: Request) {
       email,
       subject,
       message,
+      attachmentUrl: attachmentUrl || '',
       sentAt: new Date().toISOString()
     });
     
