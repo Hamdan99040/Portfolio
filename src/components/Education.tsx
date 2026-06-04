@@ -65,7 +65,7 @@ const educationData: EducationItem[] = [
     ],
     status: 'future',
     icon: <Globe className="w-5 h-5" />,
-    highlight: 'IELTS 7.5 achieved · Currently preparing applications',
+    highlight: 'Currently preparing applications',
   },
 ];
 

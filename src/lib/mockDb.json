@@ -6,7 +6,7 @@
     "name": "Muhammad Hamdan",
     "title": "Full Stack Developer | SQA Engineer",
     "location": "Okara, Pakistan",
-    "bio": "MERN Stack Developer and Software Quality Assurance (SQA) Engineer with a Bachelor of Computer Science from the University of Okara. Passionate about building secure, scalable web applications and ensuring flawless user experiences through comprehensive manual and automated testing. IELTS Band 7.5 certified and actively targeting international roles in Germany and Australia.",
+    "bio": "MERN Stack Developer and Software Quality Assurance (SQA) Engineer with a Bachelor of Computer Science from the University of Okara. Passionate about building secure, scalable web applications and ensuring flawless user experiences through comprehensive manual and automated testing. Actively targeting international roles in Germany and Australia.",
     "cvUrl": "/uploads/1780222111128_cv.pdf",
     "avatarUrl": "/avatar.jpg",
     "profiles": {
@@ -111,14 +111,6 @@
       "date": "2026",
       "credentialUrl": "#",
       "type": "Professional"
-    },
-    {
-      "id": "cert-3",
-      "title": "IELTS English Proficiency — Band 7.5",
-      "issuer": "British Council",
-      "date": "2026",
-      "credentialUrl": "#",
-      "type": "Language"
     },
     {
       "id": "cert-4",

@@ -893,7 +893,6 @@ export default function VaultDashboard() {
                   <div className="space-y-4 flex-grow">
                     {[
                       { title: 'Secure document previewed', time: '10 mins ago', desc: 'BS Degree PDF viewed with CONFIDENTIAL watermark' },
-                      { title: 'IELTS Band 7.5 added', time: '1 hour ago', desc: 'Academic credentials list synchronized' },
                       { title: 'Visitor link generated', time: '4 hours ago', desc: 'Temporary share URL generated for embassy verification' },
                       { title: 'New message received', time: '1 day ago', desc: 'Inquiry from Jane Miller (TechCorp Solutions)' },
                     ].map((act, i) => (
@@ -1504,7 +1503,7 @@ export default function VaultDashboard() {
                     🎓 Certifications & Credentials
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400">
-                    Manage certifications showcasing Meta MERN Stack, Automation Testing, or IELTS.
+                    Manage certifications showcasing Meta MERN Stack or Automation Testing.
                   </p>
                 </div>
                 <button 
@@ -1967,7 +1966,6 @@ export default function VaultDashboard() {
                             <option value="DEGREE">DEGREE</option>
                             <option value="TRANSCRIPT">TRANSCRIPT</option>
                             <option value="PASSPORT">PASSPORT</option>
-                            <option value="IELTS">IELTS SCORE</option>
                             <option value="OTHER">OTHER SCAN</option>
                           </select>
                         </div>
@@ -2170,7 +2168,6 @@ export default function VaultDashboard() {
                           <p><strong className="text-slate-500 dark:text-slate-400">Graduate Name:</strong> Muhammad Hamdan Yaseen</p>
                           <p><strong className="text-slate-500 dark:text-slate-400">Award Title:</strong> Bachelor of Science in Computer Science (BS CS)</p>
                           <p><strong className="text-slate-500 dark:text-slate-400">Issuing Authority:</strong> University Of Okara</p>
-                          <p><strong className="text-slate-500 dark:text-slate-400">Language Score:</strong> IELTS English Band 7.5 Certified</p>
                           <p><strong className="text-slate-500 dark:text-slate-400">Operational Focus:</strong> MERN Web Developer | QA Automation Specialist</p>
                         </div>
 

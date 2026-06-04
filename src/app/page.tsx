@@ -27,7 +27,7 @@ export default function Home() {
         {/* Section 1: Introduction & Glowing Avatar Banner (Base: White) */}
         <Hero />
 
-        {/* Section 2: Biography & Academic / IELTS Timeline (Alt: F8FAFC) */}
+        {/* Section 2: Biography & Academic Timeline (Alt: F8FAFC) */}
         <About />
 
         {/* Section 3: Educational Timeline (Base: White) */}

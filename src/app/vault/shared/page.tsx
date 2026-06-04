@@ -13,6 +13,7 @@ interface Document {
   fileName: string;
   watermarkText: string;
   uploadedAt: string;
+  fileContent?: string;
 }
 
 export default function SharedDocumentViewer() {
@@ -35,6 +36,14 @@ function SharedDocumentViewerContent() {
   const [doc, setDoc] = useState<Document | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const getDataUrl = (document: Document) => {
+    if (!document.fileContent) return '';
+    const lowerName = document.fileName.toLowerCase();
+    if (lowerName.endsWith('.pdf')) return `data:application/pdf;base64,${document.fileContent}`;
+    if (lowerName.endsWith('.png')) return `data:image/png;base64,${document.fileContent}`;
+    if (lowerName.endsWith('.jpg') || lowerName.endsWith('.jpeg')) return `data:image/jpeg;base64,${document.fileContent}`;
+    return '';
+  };
 
   useEffect(() => {
     async function fetchSharedDocument() {
@@ -164,7 +173,31 @@ function SharedDocumentViewerContent() {
               </div>
             </div>
 
-            {/* Simulated Watermarked Scanned PDF Document */}
+            {doc.fileContent && getDataUrl(doc) ? (
+              <div className="relative border border-white/5 rounded-3xl h-[620px] w-full bg-slate-950 overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 z-20 pointer-events-none select-none opacity-[0.08] flex flex-wrap items-center justify-center gap-16 p-4 overflow-hidden rotate-[-25deg] scale-125">
+                  {Array.from({ length: 12 }).map((_, i) => (
+                    <span key={i} className="text-xl sm:text-2xl font-extrabold text-slate-300 font-sans tracking-widest uppercase whitespace-nowrap">
+                      {doc.watermarkText}
+                    </span>
+                  ))}
+                </div>
+                {doc.fileName.toLowerCase().endsWith('.pdf') ? (
+                  <iframe
+                    src={getDataUrl(doc)}
+                    className="relative z-10 w-full h-full border-0 bg-white"
+                    title={`Secure document: ${doc.name}`}
+                  />
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={getDataUrl(doc)}
+                    alt={doc.name}
+                    className="relative z-10 w-full h-full object-contain bg-white"
+                  />
+                )}
+              </div>
+            ) : (
             <div className="relative border border-white/5 rounded-3xl h-[520px] w-full bg-slate-950 overflow-hidden flex flex-col justify-between p-8 sm:p-12 font-serif shadow-2xl">
               
               {/* Dynamic Overlaid Diagonal Watermark repeated grid */}
@@ -199,7 +232,6 @@ function SharedDocumentViewerContent() {
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Graduate Candidate</strong> Muhammad Hamdan Yaseen</p>
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Award / File Scanned</strong> Bachelor of Science in Computer Science (BS CS)</p>
                     <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">Issuing Institution</strong> University Of Okara (Verified BS Degree)</p>
-                    <p><strong className="text-slate-500 uppercase text-[10px] tracking-wider block mb-0.5">IELTS English Level</strong> Band Score 7.5 Certified</p>
                   </div>
 
                   <p className="text-[10px] text-slate-500 font-sans italic leading-relaxed">
@@ -227,6 +259,7 @@ function SharedDocumentViewerContent() {
                 </div>
               </div>
             </div>
+            )}
           </div>
         ) : null}
       </div>

@@ -1,8 +1,11 @@
 'use client';
 
 import { FileText, Download, CheckCircle, ShieldCheck } from 'lucide-react';
+import { useProfile } from '@/hooks/useProfile';
 
 export default function ResumeCenter() {
+  const { profile } = useProfile();
+
   const resumes = [
     {
       title: 'Full-Stack Developer Resume',
@@ -14,7 +17,7 @@ export default function ResumeCenter() {
         'Secure JWT Authentication',
         'RESTful API Development'
       ],
-      downloadUrl: '/CV_Hamdan.pdf',
+      downloadUrl: profile.cvUrl,
       badge: 'Dev Focus'
     },
     {
@@ -27,20 +30,19 @@ export default function ResumeCenter() {
         'CI/CD GitHub Actions Pipelines',
         'Jira Bug Tracking & Test Cases'
       ],
-      downloadUrl: '/CV_Hamdan.pdf',
+      downloadUrl: profile.cvUrl,
       badge: 'QA Focus'
     },
     {
       title: 'International Recruiter Resume',
       subtitle: 'Global Visa & Relocation ready',
-      description: 'Optimized for international companies (e.g. Germany/Australia target). Showcases IELTS Band 7.5 English proficiency, verified BS CS UO degree, and Devzox experience.',
+      description: 'Optimized for international companies (e.g. Germany/Australia target). Showcases verified BS CS UO degree, and Devzox experience.',
       highlights: [
-        'IELTS band score: 7.5 Certified',
         'Bachelor of Computer Science',
         'Verified Education Credentials',
         'Ready for Relocation / Remote'
       ],
-      downloadUrl: '/CV_Hamdan.pdf',
+      downloadUrl: profile.cvUrl,
       badge: 'Visa Ready'
     }
   ];

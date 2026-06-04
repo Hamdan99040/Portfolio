@@ -244,7 +244,7 @@ export default function Certifications() {
                     width={900}
                     height={700}
                     className="max-w-full max-h-[72vh] object-contain rounded-xl shadow-lg"
-                    priority
+                    preload
                     unoptimized
                   />
                   {/* Subtle watermark overlay */}

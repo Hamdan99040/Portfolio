@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Muhammad Hamdan | Full-Stack Developer & SQA Engineer",
   description:
-    "Professional portfolio of Muhammad Hamdan — MERN Stack Developer, SQA Engineer, and future AI professional. BS Computer Science from University of Okara. IELTS Band 7.5. Open to international roles in Germany, Australia, and beyond.",
+    "Professional portfolio of Muhammad Hamdan — MERN Stack Developer, SQA Engineer, and future AI professional. BS Computer Science from University of Okara. Open to international roles in Germany, Australia, and beyond.",
   keywords: [
     "Muhammad Hamdan",
     "Hamdan",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muhammad Hamdan | Full-Stack Developer & SQA Engineer",
     description:
-      "MERN Stack Developer & SQA Engineer. BS CS, IELTS 7.5. Building scalable web apps and quality-assured software.",
+      "MERN Stack Developer & SQA Engineer. BS CS. Building scalable web apps and quality-assured software.",
     type: "website",
   },
 };

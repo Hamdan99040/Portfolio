@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, User, Send, CheckCircle2, AlertCircle, FileText } from 'lucide-react';
+import { useProfile } from '@/hooks/useProfile';
 
 // Custom inline SVG replacements for brand icons to bypass Turbopack / lucide version export bugs
 const Facebook = (props: React.SVGProps<SVGSVGElement>) => (
@@ -80,6 +81,7 @@ const Paperclip = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function ContactForm() {
+  const { profile } = useProfile();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -170,11 +172,11 @@ export default function ContactForm() {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com', label: 'Professional Network', color: 'hover:text-blue-600 hover:border-blue-500/20' },
-    { name: 'GitHub', icon: Github, url: 'https://github.com', label: 'Open Source', color: 'hover:text-slate-900 dark:hover:text-white hover:border-slate-500/20' },
-    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com', label: 'Social Profile', color: 'hover:text-blue-500 hover:border-blue-450/20' },
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com', label: 'Life Updates', color: 'hover:text-pink-500 hover:border-pink-500/20' },
-    { name: 'Email', icon: Mail, url: 'mailto:needmorecoffee99040@gmail.com', label: 'Direct Mail', color: 'hover:text-blue-600 hover:border-blue-500/20' }
+    { name: 'LinkedIn', icon: Linkedin, url: profile.profiles?.linkedin || 'https://www.linkedin.com/in/hamdan-yaseen-27b7b2258/', label: 'Professional Network', color: 'hover:text-blue-600 hover:border-blue-500/20' },
+    { name: 'GitHub', icon: Github, url: profile.profiles?.github || 'https://github.com/Hamdan99040', label: 'Open Source', color: 'hover:text-slate-900 dark:hover:text-white hover:border-slate-500/20' },
+    { name: 'Facebook', icon: Facebook, url: profile.profiles?.facebook || 'https://facebook.com', label: 'Social Profile', color: 'hover:text-blue-500 hover:border-blue-450/20' },
+    { name: 'Instagram', icon: Instagram, url: profile.profiles?.instagram || 'https://instagram.com', label: 'Life Updates', color: 'hover:text-pink-500 hover:border-pink-500/20' },
+    { name: 'Email', icon: Mail, url: `mailto:${profile.profiles?.email || 'hamdanyaseen99040@gmail.com'}`, label: 'Direct Mail', color: 'hover:text-blue-600 hover:border-blue-500/20' }
   ];
 
   return (
@@ -389,4 +391,3 @@ export default function ContactForm() {
     </section>
   );
 }
-

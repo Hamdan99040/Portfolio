@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { hashPassword } from '@/lib/security';
+import { verifyPassword } from '@/lib/security';
 
 export async function POST(request: Request) {
   try {
@@ -11,9 +11,8 @@ export async function POST(request: Request) {
     }
     
     const admin = await db.getAdmin();
-    const inputHash = hashPassword(password);
     
-    if (admin.email.toLowerCase() !== email.toLowerCase() || admin.passwordHash !== inputHash) {
+    if (admin.email.toLowerCase() !== email.toLowerCase() || !verifyPassword(password, admin.passwordHash)) {
       return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
     }
     

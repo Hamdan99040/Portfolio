@@ -21,7 +21,11 @@ export async function POST(request: Request) {
     }
 
     // 1. Authorization Check
-    // If the upload is NOT for a public message attachment, it requires a valid admin session.
+    // Public message attachments are disabled unless explicitly enabled.
+    if (type === 'message' && process.env.ALLOW_PUBLIC_MESSAGE_UPLOADS !== 'true') {
+      return NextResponse.json({ error: 'Public message attachments are disabled' }, { status: 403 });
+    }
+
     if (type !== 'message') {
       const cookieStore = await cookies();
       const sessionCookie = cookieStore.get('admin-session');

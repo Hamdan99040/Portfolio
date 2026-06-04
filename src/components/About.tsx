@@ -1,11 +1,13 @@
 'use client';
 
 import { Calendar, GraduationCap, Globe, Award, Download, Code, ShieldCheck } from 'lucide-react';
+import { useProfile } from '@/hooks/useProfile';
 
 export default function About() {
+  const { profile } = useProfile();
+
   const highlights = [
     { icon: GraduationCap, label: 'BS Computer Science', sub: 'University of Okara · 2022–2026', color: 'text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-500/[0.08] dark:border-blue-500/15 dark:text-blue-400' },
-    { icon: Award,         label: 'IELTS Band 7.5',       sub: 'British Council · 2026',           color: 'text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-500/[0.08] dark:border-blue-500/15 dark:text-blue-400' },
     { icon: Code,          label: 'MERN Stack Expert',     sub: 'React · Node · MongoDB',           color: 'text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-500/[0.08] dark:border-blue-500/15 dark:text-blue-400' },
     { icon: ShieldCheck,   label: 'SQA Engineer',          sub: 'Cypress · Postman · Manual QA',   color: 'text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-500/[0.08] dark:border-blue-500/15 dark:text-blue-400' },
     { icon: Globe,         label: 'International Ready',   sub: 'Germany · Australia · Remote',     color: 'text-blue-600 bg-blue-50 border-blue-100 dark:bg-blue-500/[0.08] dark:border-blue-500/15 dark:text-blue-400' },
@@ -19,14 +21,6 @@ export default function About() {
       institution: 'University of Okara',
       description:
         'Graduated with strong academic standing. Studied Software Engineering, Database Systems, Web Engineering, Data Structures, and Quality Assurance frameworks. Led development and testing for the Discover Zone final year project.',
-    },
-    {
-      icon: <Award className="w-5 h-5" />,
-      date: '2026',
-      title: 'IELTS English Proficiency',
-      institution: 'British Council Certification',
-      description:
-        'Achieved Band Score 7.5 — demonstrating exceptional professional written and verbal English communication capabilities essential for international workplaces in Germany, Australia, and beyond.',
     },
     {
       icon: <Globe className="w-5 h-5" />,
@@ -105,7 +99,7 @@ export default function About() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
-                href="/CV_Hamdan.pdf"
+                href={profile.cvUrl}
                 download
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 active:scale-[0.99] transition-all duration-300 text-sm"
               >
