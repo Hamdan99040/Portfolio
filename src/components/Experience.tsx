@@ -219,7 +219,7 @@ export default function Experience() {
                     width={900}
                     height={700}
                     className="max-w-full max-h-[72vh] object-contain rounded-xl shadow-lg"
-                    priority
+                    preload
                     unoptimized
                   />
                 </div>

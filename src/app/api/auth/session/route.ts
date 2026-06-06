@@ -3,6 +3,13 @@ import { cookies } from 'next/headers';
 import { verifySessionToken } from '@/lib/security';
 import { db } from '@/lib/db';
 
+function omitSecrets(admin: Record<string, unknown>) {
+  const safeAdmin = { ...admin };
+  delete safeAdmin.passwordHash;
+  delete safeAdmin.otpSecret;
+  return safeAdmin;
+}
+
 export async function GET() {
   try {
     const cookieStore = await cookies();
@@ -19,13 +26,11 @@ export async function GET() {
     }
     
     const admin = await db.getAdmin();
-    
-    // Exclude password and secrets in returned object
-    const { passwordHash, otpSecret, ...safeAdmin } = admin;
-    
+    const adminData = typeof admin.toObject === 'function' ? admin.toObject() : admin;
+
     return NextResponse.json({
       authenticated: true,
-      user: safeAdmin
+      user: omitSecrets(adminData)
     });
   } catch (err) {
     console.error('Session API error:', err);
@@ -44,12 +49,11 @@ export async function PUT(request: Request) {
     
     const adminData = await request.json();
     const updated = await db.updateAdmin(adminData);
-    
-    const { passwordHash, otpSecret, ...safeAdmin } = updated;
+    const updatedData = typeof updated.toObject === 'function' ? updated.toObject() : updated;
     
     return NextResponse.json({
       success: true,
-      user: safeAdmin
+      user: omitSecrets(updatedData)
     });
   } catch (err) {
     console.error('Update profile API error:', err);

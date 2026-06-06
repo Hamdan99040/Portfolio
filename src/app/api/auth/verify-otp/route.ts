@@ -17,9 +17,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid request context' }, { status: 400 });
     }
     
-    // Check OTP. In production, this can use a library like 'otplib' to verify against admin.otpSecret.
-    // For local fallback and ease of use, we accept the standard '123456' as the secure verification code.
-    if (otp !== '123456') {
+    const expectedOtp = process.env.ADMIN_OTP_CODE || (process.env.NODE_ENV === 'production' ? admin.otpSecret : '123456');
+    if (!expectedOtp || otp !== expectedOtp) {
       return NextResponse.json({ error: 'Invalid verification code' }, { status: 401 });
     }
     

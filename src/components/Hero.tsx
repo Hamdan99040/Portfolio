@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Mail, MapPin, Star } from 'lucide-react';
+import { useProfile } from '@/hooks/useProfile';
 
 const container = {
   hidden: {},
@@ -29,6 +30,10 @@ const avatarAnim = {
 };
 
 export default function Hero() {
+  const { profile } = useProfile();
+  const firstName = profile.name.split(' ')[0] || 'Hamdan';
+  const contactEmail = profile.profiles?.email || 'hamdanyaseen99040@gmail.com';
+
   return (
     <section
       id="home"
@@ -65,14 +70,14 @@ export default function Hero() {
               Hey, I&apos;m{' '}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent">
-                  Hamdan
+                  {firstName}
                 </span>
                 {/* Underline accent */}
                 <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 to-blue-400 rounded-full opacity-50" />
               </span>
             </h1>
             <h2 className="font-outfit font-semibold text-lg sm:text-xl text-slate-500 dark:text-slate-400 tracking-wide">
-              Full Stack Developer &nbsp;·&nbsp; SQA Engineer &nbsp;·&nbsp; MERN Specialist
+              {profile.title.replace('|', '·')} · MERN Specialist
             </h2>
           </motion.div>
 
@@ -81,13 +86,11 @@ export default function Hero() {
             variants={item}
             className="text-slate-600 dark:text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed"
           >
-            I build high-security, scalable MERN stack applications and ensure flawless quality through automated Cypress &amp; Postman testing pipelines.
+            {profile.bio}{' '}
             BS CS from{' '}
             <span className="font-semibold text-slate-700 dark:text-slate-300">
-              University of Okara
-            </span>{' '}
-            · IELTS Band{' '}
-            <span className="font-semibold text-slate-700 dark:text-slate-300">7.5</span>.
+            University of Okara
+            </span>.
           </motion.p>
 
           {/* Location pill */}
@@ -96,7 +99,7 @@ export default function Hero() {
             className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-500 font-medium"
           >
             <MapPin className="w-3.5 h-3.5" />
-            Okara, Pakistan — available for remote &amp; relocation
+            {profile.location} - available for remote &amp; relocation
           </motion.div>
 
           {/* CTA Buttons */}
@@ -121,7 +124,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/CV_Hamdan.pdf"
+              href={profile.cvUrl}
               download
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-500/[0.08] transition-all duration-300"
             >
@@ -141,7 +144,7 @@ export default function Hero() {
 
             {/* GitHub */}
             <a
-              href="https://github.com"
+              href={profile.profiles?.github || 'https://github.com/Hamdan99040'}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -154,7 +157,7 @@ export default function Hero() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href={profile.profiles?.linkedin || 'https://www.linkedin.com/in/hamdan-yaseen-27b7b2258/'}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -167,7 +170,7 @@ export default function Hero() {
 
             {/* Email */}
             <a
-              href="mailto:needmorecoffee99040@gmail.com"
+              href={`mailto:${contactEmail}`}
               aria-label="Email"
               className="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
             >
@@ -181,7 +184,6 @@ export default function Hero() {
             className="flex flex-wrap gap-3 pt-1"
           >
             {[
-              { icon: Star, label: 'IELTS Band 7.5' },
               { icon: Star, label: 'BS Computer Science' },
               { icon: Star, label: 'Devzox Intern' },
             ].map(({ icon: Icon, label }) => (
@@ -213,11 +215,11 @@ export default function Hero() {
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[320px] md:h-[320px] rounded-full p-[3px] bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-400 shadow-2xl shadow-blue-500/[0.12] animate-avatar-glow overflow-hidden flex items-center justify-center">
               <div className="relative w-full h-full rounded-full bg-slate-100 dark:bg-[#060814] overflow-hidden">
                 <Image
-                  src="/avatar.jpg"
-                  alt="Muhammad Hamdan — Full Stack Developer & SQA Engineer"
+                  src={profile.avatarUrl || '/avatar.jpg'}
+                  alt={`${profile.name} - ${profile.title}`}
                   fill
                   className="object-cover"
-                  priority
+                  preload
                 />
               </div>
             </div>
